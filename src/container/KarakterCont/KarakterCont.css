@@ -1,0 +1,84 @@
+.container-karakter {
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-bottom: 80px;
+    background-color: #1A1D27;
+}
+
+.karakter{
+    padding-top: 70px;
+    width: 90%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Judul {
+    font-weight: bold;
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-size: 30px;
+}
+
+.container-karakter h2 {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    color: white;
+    font-weight: 370;
+}
+
+.Judul{
+    font-weight: bold;
+}
+
+.container-card{
+    width: 100%;
+    background-color: #232734;
+    border: solid 1px #2C3442;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-card h2{
+    padding-left: 30px;
+    padding-top: 30px;
+    font-weight: bold;
+}
+
+.karakter-info {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    /* padding: 20px; */
+}
+
+.karakter-info .card-karakter {
+    padding-bottom: 10px;
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 1000px) {
+    .karakter-info {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .karakter-info {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

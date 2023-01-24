@@ -1,0 +1,63 @@
+.container-detail-tailed{
+    width: 80%;
+    max-width: 1400px;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #232734;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.1s ease-in-out;
+}
+
+.detail-skill-tailed {
+    
+    color: #CBD5E1;
+}
+
+.detail-skill-tailed img {
+    border: 3px solid #E72CDE;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 100px;
+    width: 120px;
+    margin-left: 10px;
+}
+
+.detail-skill-tailed ul {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    margin-left: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    color: #E72CDE;
+}
+
+.detail-skill-tailed .content-atas{
+    display: flex;
+    width: 100%;
+    border-bottom: 3px solid rgba(34, 42, 58, 1);
+    padding: 10px;
+}
+
+.namaSkill, .effect {
+    margin-left: 16px;
+}
+
+.nama-skill-tailed .content-bawah table {
+    margin-left: 10px;
+}
+
+.nama-skill-tailed .content-bawah table tr td {
+    padding: 5px;
+    font-weight: 550;
+}
+
+.nama-skill-tailed .content-bawah{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}

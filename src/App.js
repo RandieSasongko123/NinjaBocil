@@ -1,24 +1,38 @@
-import logo from './logo.svg';
+import React, { Component, useCallback, useEffect } from 'react';
 import './App.css';
+import Navbar from './component/Navbar/Navbar';
+import HomeCont from './container/HomeCont/HomeCont';
+import SkillCont from './container/SkillCont/SkillCont';
+import TailedBeast from './component/TailedBeast/TailedBeast';
+import TierList from './component/TierList/TierList';
+import KarakterCont from './container/KarakterCont/KarakterCont';
+import FooterComp from './component/FooterComp/FooterComp';
+import ContactComp from './component/ContactComp/ContactComp';
+import PrivacyComp from './component/PrivacyComp/PrivacyComp';
+import DetailCharCont from './container/DetailCharCont/DetailCharCont';
+import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
+import ScrollToTop from './component/ScrollToTop';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <ScrollToTop />
+        <Routes>
+          <Route path='/' element={<HomeCont />} exact />
+          <Route path='/Karakter' element={<KarakterCont />} exact />
+          <Route path='/detail-char/:id'element={<DetailCharCont />} />
+          <Route path='/Skill' element={<SkillCont />} exact />
+          <Route path='/Tailed' element={<TailedBeast />} exact />
+          <Route path='/Tier' element={<TierList />} exact />
+          <Route path='/Contact' element={<ContactComp />} exact />
+          <Route path='/Privacy' element={<PrivacyComp />} exact />
+        </Routes>
+        <FooterComp />
+      </div>
+    </Router>
   );
 }
 

@@ -1,0 +1,48 @@
+.button-home{
+    width: 90%;
+    height: auto;
+    max-width: 1400px;
+    padding: 10px;
+}
+
+.button-home ul{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-content: space-around;
+}
+
+.button-home li{
+    padding: 20px;
+}
+
+.button-home ul li a{
+    padding: 10px;
+    background-color: #232734;
+    text-decoration: none;
+    color: #8A919D;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 6px;
+    border: 3px solid rgba(34, 42, 58, 0.8);
+    transition: all 0.1s ease-in-out;
+}
+
+.button-home ul li a:hover{
+    background-color: rgb(56, 62, 75);
+}
+
+@media screen and (max-width: 1000px) {
+    .button-home ul{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .button-home ul{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-around;
+    }
+}

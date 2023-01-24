@@ -1,0 +1,58 @@
+.container-skill{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+    background-color: #1A1D27;
+    padding-top: 60px;
+}
+
+.content-skill-cont{
+    width: 90%;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-skill .Judul{
+    width: 90%;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skill {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 90%;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-skill{
+    width: 40%;
+    max-width: 1500px;
+    padding: 14px;
+    font-size: 20px;
+    color: #9CA3AF;
+    background-color: #232734;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-left: 5%;
+}
+
+@media screen and (max-width: 1000px) {
+    .skill {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .skill {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

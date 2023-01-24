@@ -1,0 +1,68 @@
+.container-tailed{
+    width: 80%;
+    margin-top: 60px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    background-color: #232734;
+    border-radius: 8px;
+}
+
+.content-tailed{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-kiri img{
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+}
+
+.content-kanan{
+    padding: 10px;
+}
+
+.content-kanan h1{
+    margin-left: 30px;
+    font-size: 60px;
+    font-weight: bold;
+    color: #8A919D;
+}
+
+.content-kanan img{
+    margin-left: 30px;
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+    .content-tailed{
+        display: block;
+    }
+
+    .content-kiri img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .content-kanan{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .content-kanan h1{
+        font-size: 24px;
+    }
+
+    .content-kanan img{
+        float: c;
+        width: 60px;
+        height: 60px;
+    }
+}

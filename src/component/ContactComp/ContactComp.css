@@ -1,0 +1,48 @@
+.container-contact{
+    width: 100%;
+    background-color: #1A1D27;
+    padding: 20px;
+}
+
+.content-contact{
+    padding-top: 80px;
+    width: 90%;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-contact h1{
+    font-size: 42px;
+    color: white;
+}
+
+.detail-contact{
+    margin-top: 30px;
+    width: 80%;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #232734;
+    color: #8A919D;
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid #2B3341;
+
+}
+
+.detail-contact p{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 720px) {
+    .detail-contact{
+        width: 70%;
+        margin-left: 5px;
+    }
+
+    .content-contact{
+        padding-top: 100px;
+    }
+}

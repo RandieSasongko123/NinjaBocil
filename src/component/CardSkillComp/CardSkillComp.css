@@ -1,0 +1,90 @@
+.container-card-skill{
+    margin-top: 10px;
+    border: 3px solid #282D3E;
+    background-color: #232734;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.container-card-skill:hover{
+    background-color: rgb(56, 62, 75);
+}
+
+.detail-skill {
+    display: flex;
+    color: #CBD5E1;
+}
+
+.detail-skill img {
+    /* border: 3px solid #E72CDE; */
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 100px;
+    width: 120px;
+    margin-left: 10px;
+}
+
+.detail-skill ul {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    margin-left: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    color: #E72CDE;
+}
+
+.detail-skill .content-atas{
+    display: flex;
+    width: 100%;
+    border-bottom: 3px solid rgba(34, 42, 58, 1);
+    padding: 10px;
+}
+
+.namaSkill, .effect {
+    margin-left: 16px;
+}
+
+table {
+    margin-left: 10px;
+}
+
+table tr td {
+    padding: 5px;
+    font-weight: 550;
+}
+
+.content-bawah{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 720px) {
+    .detail-skill ul {
+        font-size: 12px;
+    }
+
+    .keterangan-skill h1{
+        font-size: 24px;
+    }
+
+    .keterangan-skill h3{
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    table tr td {
+        padding: 1px;
+        font-size: 11px;
+    }
+
+    .detail-skill img {
+        width: 200px;
+        height: 100px;
+    }
+
+}
+
