@@ -21,7 +21,7 @@ function App() {
         <Navbar />
         <ScrollToTop />
         <Routes>
-          <Route path='/' element={<HomeCont />} exact />
+          <Route path='/NinjaBocil' element={<HomeCont />} exact />
           <Route path='/Karakter' element={<KarakterCont />} exact />
           <Route path='/detail-char/:id'element={<DetailCharCont />} />
           <Route path='/Skill' element={<SkillCont />} exact />

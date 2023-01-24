@@ -25,6 +25,7 @@ class DetailCharCont extends Component {
   render() {
     return (
       <div className="container-detail-char">
+
         <div className="content-atas-char">
           {this.state.post.map((post) => {
             return (
@@ -40,6 +41,7 @@ class DetailCharCont extends Component {
             );
           })}
         </div>
+        
         <div className="content-bawah-char">
           {this.state.post.map((item) => {
             return (

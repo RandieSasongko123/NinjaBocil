@@ -19,7 +19,7 @@ class HomeCont extends Component {
           </div>
 
           <div className="content-home-3">
-            <HomeTailed namaTailed="Randie Sasongko" />
+            <HomeTailed/>
             <HomeKet />
           </div>
         </div>

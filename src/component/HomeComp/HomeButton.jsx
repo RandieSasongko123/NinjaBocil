@@ -8,31 +8,31 @@ const HomeButton = () => {
       <ul>
         <li>
           {/* <a href="">Senin</a> */}
-          <Link to="/#senin">Senin</Link>
+          <Link to="">Senin</Link>
         </li>
         <li>
           {/* <a href="">Selasa</a> */}
-          <Link to="/#selasa">Selasa</Link>
+          <Link to="">Selasa</Link>
         </li>
         <li>
           {/* <a href="">Rabu</a> */}
-          <Link to="/#rabu">Rabu</Link>
+          <Link to="">Rabu</Link>
         </li>
         <li>
           {/* <a href="">Kamis</a> */}
-          <Link to="/#kamis">Kamis</Link>
+          <Link to="">Kamis</Link>
         </li>
         <li>
           {/* <a href="">Jumat</a> */}
-          <Link to="/#jumat">Jumat</Link>
+          <Link to="">Jumat</Link>
         </li>
         <li>
           {/* <a href="">Sabtu</a> */}
-          <Link to="/#sabtu">Sabtu</Link>
+          <Link to="">Sabtu</Link>
         </li>
         <li>
           {/* <a href="">Minggu</a> */}
-          <Link to="/#minggu">Minggu</Link>
+          <Link to="">Minggu</Link>
         </li>
       </ul>
     </div>
