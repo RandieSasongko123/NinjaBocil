@@ -17,15 +17,15 @@ const Navbar = () => {
     <div className="container-navBar">
       <div className="navBar">
         <div className="nav_kiri">
-          <a href="#">
+          {/* <a href="#"> */}
             <img src={Logo} alt="" />
-          </a>
+          {/* </a> */}
           <h1>NinjaBocil</h1>
         </div>
 
         <ul className="nav_kanan_web">
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/NinjaBocil">Home</Link>
             </li>
   
             <li>
@@ -69,7 +69,7 @@ const Navbar = () => {
           </ul>:null
         }
 
-        <div class="menu-toggle">
+        <div className="menu-toggle">
           <input type="checkbox" onClick={() =>setShow(!show)}/>
           <span></span>
           <span></span>

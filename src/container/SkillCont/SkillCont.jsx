@@ -8,6 +8,7 @@ import axios from "axios";
 // import useAxios from "axios-hooks";
 
 class SkillCont extends Component {
+
   state = {
     post: [],
   };
@@ -37,7 +38,7 @@ class SkillCont extends Component {
             type="text"
             className="search-skill"
             onChange={this.searchChanged}
-            value={this.state.search}
+            value={this.state.search || ""} 
             placeholder="Search..."
           />
           <div className="skill">

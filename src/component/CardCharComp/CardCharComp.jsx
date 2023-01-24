@@ -1,18 +1,18 @@
 import React from "react";
 import "./CardCharComp.css";
 import Logo from "../../image/Logo.jpeg";
-import { Link, useParams } from "react-router-dom";
+// import { Link, useParams } from "react-router-dom";
 // import { charData } from "../../database/charData";
 
 const CardCharComp = (props) => {
 
-  function detailChar(id) {
-    return id;
-  }
+  // function detailChar(id) {
+  //   return id;
+  // }
 
   return (
     // <Link to={'/detail-char/' + detailChar(props.id)}>
-      <div className="card" onClick={() => props.goDetail(props.id)}>
+      <div className="card">
         <center>
           <p className="id">{props.id}</p>
           <img src={props.logo} alt="" />

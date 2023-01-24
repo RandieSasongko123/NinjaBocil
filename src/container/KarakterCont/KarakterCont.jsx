@@ -1,15 +1,13 @@
 import { Component } from "react";
 import { TabTitle } from "../GeneralFunction";
+import { Link } from "react-router-dom";
 // import { charData } from "../../database/charData";
 import "./KarakterCont.css";
 import CardCharComp from "../../component/CardCharComp/CardCharComp";
 import axios from "axios";
-import { useNavigate } from 'react-router-dom';
-
-
+// import { useNavigate } from 'react-router-dom';
 
 class KarakterCont extends Component {
-
   state = {
     post: [],
   };
@@ -23,13 +21,7 @@ class KarakterCont extends Component {
         });
       });
   }
-
-
-  handleDetail = (id) => {
-    let navigate = useNavigate();
-    this.props.navigate(`/detail-char/${id}`);
-  }
-
+  
   render() {
     TabTitle("Ninja Bocil | Karakter");
 
@@ -41,21 +33,17 @@ class KarakterCont extends Component {
           <div className="container-card">
             <h2>Fire</h2>
             <div className="karakter-info">
-              {/* {charData
-                .filter((charData) => charData.chakra === "Fire")
-                .map((item) => (
-                  <CardCharComp nama={item.nama} logo={item.fotohero} />
-                ))} */}
-              {/* {
-                  this.state.post.map(post => {
-                    return <CardCharComp nama={post.nama} logo={post.fotohero} />
-                  })
-                } */}
               {this.state.post
                 .filter((post) => post.chakra === "Fire")
                 .map((item) => (
-                  <CardCharComp goDetail={this.handleDetail}
-                  key={item._id} id={item._id} nama={item.nama} logo={item.fotohero}/>
+                  <Link key={item._id} to={`/detail-char/${item._id}`}>
+                    <CardCharComp
+                      goDetail={this.handleDetail}
+                      key={item._id}
+                      nama={item.nama}
+                      logo={item.fotohero}
+                    />
+                  </Link>
                 ))}
             </div>
           </div>
@@ -66,7 +54,13 @@ class KarakterCont extends Component {
               {this.state.post
                 .filter((post) => post.chakra === "Water")
                 .map((item) => (
-                  <CardCharComp key={item._id} id={item._id} nama={item.nama} logo={item.fotohero} />
+                  <Link key={item._id} to={`/detail-char/${item._id}`}>
+                    <CardCharComp
+                      key={item._id}
+                      nama={item.nama}
+                      logo={item.fotohero}
+                    />
+                  </Link>
                 ))}
             </div>
           </div>
@@ -77,7 +71,13 @@ class KarakterCont extends Component {
               {this.state.post
                 .filter((post) => post.chakra === "Wind")
                 .map((item) => (
-                  <CardCharComp key={item._id} id={item._id} nama={item.nama} logo={item.fotohero} />
+                  <Link key={item._id} to={`/detail-char/${item._id}`}>
+                    <CardCharComp
+                      key={item._id}
+                      nama={item.nama}
+                      logo={item.fotohero}
+                    />
+                  </Link>
                 ))}
             </div>
           </div>
@@ -88,7 +88,13 @@ class KarakterCont extends Component {
               {this.state.post
                 .filter((post) => post.chakra === "Earth")
                 .map((item) => (
-                  <CardCharComp key={item._id} id={item._id} nama={item.nama} logo={item.fotohero} />
+                  <Link key={item._id} to={`/detail-char/${item._id}`}>
+                    <CardCharComp
+                      key={item._id}
+                      nama={item.nama}
+                      logo={item.fotohero}
+                    />
+                  </Link>
                 ))}
             </div>
           </div>
@@ -99,7 +105,13 @@ class KarakterCont extends Component {
               {this.state.post
                 .filter((post) => post.chakra === "Lightning")
                 .map((item) => (
-                  <CardCharComp key={item._id} id={item._id} nama={item.nama} logo={item.fotohero} />
+                  <Link key={item._id} to={`/detail-char/${item._id}`}>
+                    <CardCharComp
+                      key={item._id}
+                      nama={item.nama}
+                      logo={item.fotohero}
+                    />
+                  </Link>
                 ))}
             </div>
           </div>
@@ -110,3 +122,15 @@ class KarakterCont extends Component {
 }
 
 export default KarakterCont;
+
+/* {charData
+                .filter((charData) => charData.chakra === "Fire")
+                .map((item) => (
+                  <CardCharComp nama={item.nama} logo={item.fotohero} />
+                ))} */
+
+/* {
+                  this.state.post.map(post => {
+                    return <CardCharComp nama={post.nama} logo={post.fotohero} />
+                  })
+                } */

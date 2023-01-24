@@ -1,4 +1,4 @@
-import React, { Component, useCallback, useEffect } from 'react';
+import React from 'react';
 import './App.css';
 import Navbar from './component/Navbar/Navbar';
 import HomeCont from './container/HomeCont/HomeCont';
@@ -10,7 +10,7 @@ import FooterComp from './component/FooterComp/FooterComp';
 import ContactComp from './component/ContactComp/ContactComp';
 import PrivacyComp from './component/PrivacyComp/PrivacyComp';
 import DetailCharCont from './container/DetailCharCont/DetailCharCont';
-import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './component/ScrollToTop';
 
 function App() {

@@ -1,8 +1,16 @@
 import React from "react";
 import './DetailComp.css';
 import Logo from "../../image/Logo.jpeg";
+import { useParams } from "react-router-dom";
 
 const DetailComp = (props) => {
+
+    const params=useParams()
+
+    React.useEffect(() => {
+        console.log("Params", params)
+    },[params])
+
     return(
         <div className="container-detail-character">
             <div className="content-character">

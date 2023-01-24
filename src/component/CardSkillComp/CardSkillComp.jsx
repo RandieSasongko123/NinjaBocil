@@ -21,26 +21,28 @@ const CardSkillComp = (props) => {
               <li className="damage">Damage : {props.damage}</li>
             </ul>
             <table>
-              <tr>
-                <td>Round of duraction</td>
-                <td> : </td>
-                <td>{props.round}</td>
-              </tr>
-              <tr>
-                <td>Launch time</td>
-                <td> : </td>
-                <td>{props.launch}</td>
-              </tr>
-              <tr>
-                <td>Proc. Rate</td>
-                <td> : </td>
-                <td>{props.rate}</td>
-              </tr>
-              <tr>
-                <td>Restriction</td>
-                <td> : </td>
-                <td>{props.restriction}</td>
-              </tr>
+              <tbody>
+                <tr>
+                  <td>Round of duraction</td>
+                  <td> : </td>
+                  <td>{props.round}</td>
+                </tr>
+                <tr>
+                  <td>Launch time</td>
+                  <td> : </td>
+                  <td>{props.launch}</td>
+                </tr>
+                <tr>
+                  <td>Proc. Rate</td>
+                  <td> : </td>
+                  <td>{props.rate}</td>
+                </tr>
+                <tr>
+                  <td>Restriction</td>
+                  <td> : </td>
+                  <td>{props.restriction}</td>
+                </tr>
+              </tbody>
             </table>
           </div>
         </div>
@@ -50,7 +52,7 @@ const CardSkillComp = (props) => {
 };
 
 CardSkillComp.defaultProps = {
-  logoSkill : Logo,
+  logoSkill: Logo,
   namaSkill: "Shadow Clone Rasengan",
   grade: "S",
   chakra: "Wind",
