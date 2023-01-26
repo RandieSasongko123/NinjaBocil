@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import "./FooterComp.css";
 
 const FooterComp = () => {
@@ -10,10 +10,10 @@ const FooterComp = () => {
           <h1>Ninja Bocil</h1>
           <ul>
             <li>
-              <Link to="/Privacy">Privacy Policy</Link>
+              <NavLink to="/Privacy" exact activeClassName="active">Privacy Policy</NavLink>
             </li>
             <li>
-              <Link to="/Contact">Contact</Link>
+              <NavLink to="/Contact" exact activeClassName="active">Contact</NavLink>
             </li>
           </ul>
         </div>

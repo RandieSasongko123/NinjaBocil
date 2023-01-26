@@ -6,6 +6,8 @@ import DetailComp from "../../component/DetailCharComp/DetailComp";
 import axios from "axios";
 
 class DetailCharCont extends Component {
+
+  
   state = {
     post: [],
   };
@@ -13,7 +15,7 @@ class DetailCharCont extends Component {
   componentDidMount() {
     axios
       .get(
-        "https://publicapininjaheroes.vercel.app/ninja/?id=63a2623a333ab08787a882a2"
+        `https://publicapininjaheroes.vercel.app/ninja/`
       )
       .then((result) => {
         this.setState({

@@ -8,7 +8,6 @@ import axios from "axios";
 // import useAxios from "axios-hooks";
 
 class SkillCont extends Component {
-
   state = {
     post: [],
   };
@@ -24,7 +23,7 @@ class SkillCont extends Component {
   }
 
   searchChanged = (event) => {
-    this.setState({ search: event.target.value });
+    this.setState({ nama: event.target.value });
   };
 
   render() {
@@ -38,12 +37,33 @@ class SkillCont extends Component {
             type="text"
             className="search-skill"
             onChange={this.searchChanged}
-            value={this.state.search || ""} 
+            value={this.state.nama}
             placeholder="Search..."
           />
           <div className="skill">
             {this.state.post
-              .filter((post) => post.nama.includes(this.state.search))
+              .filter((post) => {
+                if(post.nama.toLowerCase().includes(this.state.nama)) {
+                  return post;
+                }
+                else if(this.state.nama == null){
+                  return <CardSkillComp
+                  key={post._id}
+                  logoSkill={post.fotoskill}
+                  namaSkill={post.nama}
+                  grade={post.grade}
+                  chakra={post.chakra}
+                  damage={post.damage}
+                  effect={post.effect}
+                  round={post.round}
+                  launch={post.launch}
+                  rate={post.procRate}
+                  restriction={post.restriction}
+                />
+                }
+                return null;
+              }
+              )
               .map((post) => (
                 <CardSkillComp
                   key={post._id}
@@ -59,6 +79,23 @@ class SkillCont extends Component {
                   restriction={post.restriction}
                 />
               ))}
+
+            {/* {this.state.post
+              .map((post) => (
+                <CardSkillComp
+                  key={post._id}
+                  logoSkill={post.fotoskill}
+                  namaSkill={post.nama}
+                  grade={post.grade}
+                  chakra={post.chakra}
+                  damage={post.damage}
+                  effect={post.effect}
+                  round={post.round}
+                  launch={post.launch}
+                  rate={post.procRate}
+                  restriction={post.restriction}
+                />
+              ))} */}
           </div>
         </div>
       </div>
@@ -98,11 +135,11 @@ export default SkillCont;
 //         </center>
 
 //         <div className="skill">
-//         {skillList &&
-//           skillList.map((item)=>{
-//             return <h4>{item.nama}</h4>
-//           })
-//         }
+// {skillList &&
+//   skillList.map((item)=>{
+//     return <h4>{item.nama}</h4>
+//   })
+// }
 
 //           {/* {skillData
 //             .filter((skillData) =>

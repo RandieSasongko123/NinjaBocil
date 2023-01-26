@@ -2,13 +2,24 @@ import React from "react";
 import './DetailComp.css';
 import Logo from "../../image/Logo.jpeg";
 import { useParams } from "react-router-dom";
+// import axios from "axios";
 
 const DetailComp = (props) => {
 
     const params=useParams()
 
+    // state = {
+    //     post: [],
+    //   };
+
     React.useEffect(() => {
         console.log("Params", params)
+        // axios.get(`https://publicapininjaheroes.vercel.app/ninja/`)
+        // .then((result) => {
+        //     this.setState({
+        //       post: result.data,
+        //     });
+        //   });
     },[params])
 
     return(

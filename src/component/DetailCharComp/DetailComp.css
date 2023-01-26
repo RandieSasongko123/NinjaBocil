@@ -14,6 +14,11 @@
     height: 300px;
 }
 
+.content-kiri-character img{
+    width: 300px;
+    height: 300px;
+}
+
 .content-kanan-character{
     color: #9CA3AF;
     margin-left: 30px;
@@ -26,7 +31,7 @@
 }
 
 .content-kanan-character h1{
-    font-size: 90px;
+    font-size: 48px;
 }
 
 .content-kanan-character .detail-character ul li{
@@ -35,7 +40,45 @@
     border: 3px solid #E72CDE;
     border-radius: 50%;
     font-size: 24px;
-    padding: 25px;
-    margin-left: 20px;
+    padding: 15px;
+    margin-left: 10px;
     /* rgba(34, 42, 58, 1) */
+}
+
+@media screen and (max-width: 1000px) {
+    .content-kiri-character img{
+        width: 125px;
+        height: 125px;
+    }
+
+    .content-kanan-character h1{
+        font-size: 24px;
+    }
+
+    .content-kanan-character .detail-character ul li{
+        padding: 20px;
+        font-size: 14px;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .content-character{
+        display: flex;
+    }
+
+    .content-kiri-character img{
+        width: 75px;
+        height: 75px;
+    }
+
+    .content-kanan-character h1{
+        font-size: 18px;
+    }
+
+    .content-kanan-character .detail-character ul li{
+        padding: 10px;
+        font-size: 10px;
+        margin-left: 4px;
+    }
 }

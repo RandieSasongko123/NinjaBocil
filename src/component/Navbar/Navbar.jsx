@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import Logo from "../../image/Logo.jpeg";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -25,46 +25,46 @@ const Navbar = () => {
 
         <ul className="nav_kanan_web">
             <li>
-              <Link to="/NinjaBocil">Home</Link>
+              <NavLink to="/NinjaBocil" exact activeClassName="active">Home</NavLink>
             </li>
   
             <li>
-              <Link to="/Karakter">Character</Link>
+              <NavLink to="/Karakter" exact activeClassName="active">Character</NavLink>
             </li>
   
             <li>
-              <Link to="/Skill">Skill</Link>
+              <NavLink to="/Skill" exact activeClassName="active">Skill</NavLink>
             </li>
   
             <li>
-              <Link to="/Tailed">Tailed Beast</Link>
+              <NavLink to="/Tailed" exact activeClassName="active">Tailed Beast</NavLink>
             </li>
   
             <li>
-              <Link to="/Tier">Tier List</Link>
+              <NavLink to="/Tier" exact activeClassName="active">Tier List</NavLink>
             </li>
           </ul>
 
         {
             !show?<ul className="nav_kanan_mobile">
             <li>
-              <Link to="/">Home</Link>
+              <NavLink to="/NinjaBocil" exact activeClassName="active">Home</NavLink>
             </li>
   
             <li>
-              <Link to="/Karakter">Character</Link>
+              <NavLink to="/Karakter" exact activeClassName="active">Character</NavLink>
             </li>
   
             <li>
-              <Link to="/Skill">Skill</Link>
+              <NavLink to="/Skill" exact activeClassName="active">Skill</NavLink>
             </li>
   
             <li>
-              <Link to="/Tailed">Tailed Beast</Link>
+              <NavLink to="/Tailed" exact activeClassName="active">Tailed Beast</NavLink>
             </li>
   
             <li>
-              <Link to="/Tier">Tier List</Link>
+              <NavLink to="/Tier" exact activeClassName="active">Tier List</NavLink>
             </li>
           </ul>:null
         }

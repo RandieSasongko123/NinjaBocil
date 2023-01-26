@@ -63,6 +63,11 @@
     transition: all 0.3s ease-in-out;
 }
 
+.navBar ul li a.active{
+    color: #E72CDE;
+    border-bottom: solid 2px #E72CDE;
+}
+
 .navBar .nav_kanan_web li a:hover, .navBar .nav_kanan_mobile li a:hover{
     color: #E72CDE;
     border-bottom: solid 2px #E72CDE;
