@@ -3,33 +3,16 @@ import { Component } from "react";
 import "./DetailCharCont.css";
 import RecomComp from "../../component/DetailCharComp/RecomComp";
 import DetailComp from "../../component/DetailCharComp/DetailComp";
-import axios from "axios";
 
 class DetailCharCont extends Component {
-
-  
-  state = {
-    post: [],
-  };
-
-  componentDidMount() {
-    axios
-      .get(
-        `https://publicapininjaheroes.vercel.app/ninja/`
-      )
-      .then((result) => {
-        this.setState({
-          post: result.data,
-        });
-      });
-  }
 
   render() {
     return (
       <div className="container-detail-char">
-
+        
         <div className="content-atas-char">
-          {this.state.post.map((post) => {
+        <DetailComp />
+          {/* {this.state.post.map((post) => {
             return (
               <DetailComp
                 key={post._id}
@@ -41,11 +24,12 @@ class DetailCharCont extends Component {
                 chakra={post.chakra}
               />
             );
-          })}
+          })} */}
         </div>
         
         <div className="content-bawah-char">
-          {this.state.post.map((item) => {
+          <RecomComp />
+          {/* {this.state.post.map((item) => {
             return (
               <RecomComp
                 key={item._id}
@@ -61,7 +45,7 @@ class DetailCharCont extends Component {
                 tailed2={item.tailed[1]}
               />
             );
-          })}
+          })} */}
         </div>
       </div>
     );
@@ -69,13 +53,4 @@ class DetailCharCont extends Component {
 }
 
 export default DetailCharCont;
-
-
-  /* <DetailComp 
-          logoChar 
-          namaChar
-          grade 
-          quality 
-          point 
-          chakra /> */
 

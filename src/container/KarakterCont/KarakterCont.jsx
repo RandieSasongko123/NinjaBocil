@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import "./KarakterCont.css";
 import CardCharComp from "../../component/CardCharComp/CardCharComp";
 import axios from "axios";
-// import { useNavigate } from 'react-router-dom';
 
 class KarakterCont extends Component {
   state = {

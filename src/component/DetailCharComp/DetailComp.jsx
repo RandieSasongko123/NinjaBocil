@@ -2,42 +2,59 @@ import React from "react";
 import './DetailComp.css';
 import Logo from "../../image/Logo.jpeg";
 import { useParams } from "react-router-dom";
-// import axios from "axios";
+import axios from "axios";
+import {useState, useEffect} from "react";
 
-const DetailComp = (props) => {
+const DetailComp = () => {
 
-    const params=useParams()
+    const {id} =useParams()
+    const [ninja , setNinja] = useState({
+        background:'',
+        chakra:'',
+        fotohero:'',
+        fotodetail:'',
+        quality:'',
+        point:'',
+        nama : '',
+        grade: ''
+    })
 
-    // state = {
-    //     post: [],
-    //   };
-
-    React.useEffect(() => {
-        console.log("Params", params)
-        // axios.get(`https://publicapininjaheroes.vercel.app/ninja/`)
-        // .then((result) => {
-        //     this.setState({
-        //       post: result.data,
-        //     });
-        //   });
-    },[params])
+    useEffect(() => {
+        console.log("params", id)
+        axios.get(`https://publicapininjaheroes.vercel.app/ninja/${id}`)
+        .then(res => {
+            setNinja({
+                nama : res.data[0].nama,
+                grade : res.data[0].grade,
+                fotohero: res.data[0].fotohero,
+                fotodetail : res.data[0].fotodetail,
+                quality: res.data[0].quality,
+                point : res.data[0].point,
+                chakra : res.data[0].chakra
+            })
+        }).catch(err => {
+            console.log(err)
+        })
+    },[id])
 
     return(
         <div className="container-detail-character">
             <div className="content-character">
-
+                {/* <pre>{JSON.stringify(ninja, null, 2)}</pre> */}
                 <div className="content-kiri-character">
-                    <img className="logoChar" src={props.logoChar} alt="" />
+                    <center><a href="
+                    "><img className="logoChar" src={ninja.fotohero} alt="" /></a></center>
+                    <br />
                 </div>
                 
                 <div className="content-kanan-character">
-                    <h1>{props.namaChar}</h1>
+                    <h1>{ninja.nama}</h1>
                     <div className="detail-character">
                         <ul>
-                            <li>Grade :<br /> {props.grade} </li>
-                            <li>Quality :<br /> {props.quality} </li>
-                            <li>G. Point :<br /> {props.point} </li>
-                            <li>Chakra :<br /> {props.chakra} </li>
+                            <li>Grade :<br /> {ninja.grade} </li>
+                            <li>Quality :<br /> {ninja.quality} </li>
+                            <li>G. Point :<br /> {ninja.point} </li>
+                            <li>Chakra :<br /> {ninja.chakra} </li>
                         </ul>
                     </div>
                 </div>

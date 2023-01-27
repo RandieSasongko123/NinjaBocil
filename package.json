@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "http://RandieSasongko.github.io/NinjaBocil",
+  "homepage": "http://RandieSasongko123.github.io/NinjaBocil",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -19,7 +19,7 @@
     "react-i18next": "^12.1.4",
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.7.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

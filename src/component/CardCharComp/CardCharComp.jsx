@@ -6,10 +6,6 @@ import Logo from "../../image/Logo.jpeg";
 
 const CardCharComp = (props) => {
 
-  // function detailChar(id) {
-  //   return id;
-  // }
-
   return (
     // <Link to={'/detail-char/' + detailChar(props.id)}>
       <div className="card">
