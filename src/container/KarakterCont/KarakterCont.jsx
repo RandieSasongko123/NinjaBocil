@@ -20,7 +20,7 @@ class KarakterCont extends Component {
         });
       });
   }
-  
+
   render() {
     TabTitle("Ninja Bocil | Karakter");
 
@@ -33,7 +33,83 @@ class KarakterCont extends Component {
             <h2>Fire</h2>
             <div className="karakter-info">
               {this.state.post
-                .filter((post) => post.chakra === "Fire")
+                .filter(
+                  (post) => post.chakra === "Fire" && post.grade === "SSS"
+                )
+                .map((item) => (
+                  <Link key={item._id} to={`/detail-char/${item._id}`}>
+                    <CardCharComp
+                      goDetail={this.handleDetail}
+                      key={item._id}
+                      nama={item.nama}
+                      logo={item.fotohero}
+                    />
+                  </Link>
+                ))}
+              {this.state.post
+                .filter(
+                  (post) => post.chakra === "Fire" && post.grade === "SSS"
+                )
+                .map((item) => (
+                  <Link key={item._id} to={`/detail-char/${item._id}`}>
+                    <CardCharComp
+                      goDetail={this.handleDetail}
+                      key={item._id}
+                      nama={item.nama}
+                      logo={item.fotohero}
+                    />
+                  </Link>
+                ))}
+              {this.state.post
+                .filter((post) => post.chakra === "Fire" && post.grade === "SS")
+                .map((item) => (
+                  <Link key={item._id} to={`/detail-char/${item._id}`}>
+                    <CardCharComp
+                      goDetail={this.handleDetail}
+                      key={item._id}
+                      nama={item.nama}
+                      logo={item.fotohero}
+                    />
+                  </Link>
+                ))}
+              {this.state.post
+                .filter((post) => post.chakra === "Fire" && post.grade === "S")
+                .map((item) => (
+                  <Link key={item._id} to={`/detail-char/${item._id}`}>
+                    <CardCharComp
+                      goDetail={this.handleDetail}
+                      key={item._id}
+                      nama={item.nama}
+                      logo={item.fotohero}
+                    />
+                  </Link>
+                ))}
+              {this.state.post
+                .filter((post) => post.chakra === "Fire" && post.grade === "A")
+                .map((item) => (
+                  <Link key={item._id} to={`/detail-char/${item._id}`}>
+                    <CardCharComp
+                      goDetail={this.handleDetail}
+                      key={item._id}
+                      nama={item.nama}
+                      logo={item.fotohero}
+                    />
+                  </Link>
+                ))}
+              {this.state.post
+                .filter((post) => post.chakra === "Fire" && post.grade === "B")
+                .map((item) => (
+                  <Link key={item._id} to={`/detail-char/${item._id}`}>
+                    <CardCharComp
+                      goDetail={this.handleDetail}
+                      key={item._id}
+                      nama={item.nama}
+                      logo={item.fotohero}
+                    />
+                  </Link>
+                ))}
+              {this.state.post
+                .filter((post) => post.chakra === "Fire" && post.grade === "D")
                 .map((item) => (
                   <Link key={item._id} to={`/detail-char/${item._id}`}>
                     <CardCharComp
@@ -51,10 +127,75 @@ class KarakterCont extends Component {
             <h2>Water</h2>
             <div className="karakter-info">
               {this.state.post
-                .filter((post) => post.chakra === "Water")
+                .filter(
+                  (post) => post.chakra === "Water" && post.grade === "SSS"
+                )
                 .map((item) => (
                   <Link key={item._id} to={`/detail-char/${item._id}`}>
                     <CardCharComp
+                      goDetail={this.handleDetail}
+                      key={item._id}
+                      nama={item.nama}
+                      logo={item.fotohero}
+                    />
+                  </Link>
+                ))}
+              {this.state.post
+                .filter(
+                  (post) => post.chakra === "Water" && post.grade === "SS"
+                )
+                .map((item) => (
+                  <Link key={item._id} to={`/detail-char/${item._id}`}>
+                    <CardCharComp
+                      goDetail={this.handleDetail}
+                      key={item._id}
+                      nama={item.nama}
+                      logo={item.fotohero}
+                    />
+                  </Link>
+                ))}
+              {this.state.post
+                .filter((post) => post.chakra === "Water" && post.grade === "S")
+                .map((item) => (
+                  <Link key={item._id} to={`/detail-char/${item._id}`}>
+                    <CardCharComp
+                      goDetail={this.handleDetail}
+                      key={item._id}
+                      nama={item.nama}
+                      logo={item.fotohero}
+                    />
+                  </Link>
+                ))}
+              {this.state.post
+                .filter((post) => post.chakra === "Water" && post.grade === "A")
+                .map((item) => (
+                  <Link key={item._id} to={`/detail-char/${item._id}`}>
+                    <CardCharComp
+                      goDetail={this.handleDetail}
+                      key={item._id}
+                      nama={item.nama}
+                      logo={item.fotohero}
+                    />
+                  </Link>
+                ))}
+              {this.state.post
+                .filter((post) => post.chakra === "Water" && post.grade === "B")
+                .map((item) => (
+                  <Link key={item._id} to={`/detail-char/${item._id}`}>
+                    <CardCharComp
+                      goDetail={this.handleDetail}
+                      key={item._id}
+                      nama={item.nama}
+                      logo={item.fotohero}
+                    />
+                  </Link>
+                ))}
+              {this.state.post
+                .filter((post) => post.chakra === "Water" && post.grade === "D")
+                .map((item) => (
+                  <Link key={item._id} to={`/detail-char/${item._id}`}>
+                    <CardCharComp
+                      goDetail={this.handleDetail}
                       key={item._id}
                       nama={item.nama}
                       logo={item.fotohero}
@@ -68,10 +209,73 @@ class KarakterCont extends Component {
             <h2>Wind</h2>
             <div className="karakter-info">
               {this.state.post
-                .filter((post) => post.chakra === "Wind")
+                .filter(
+                  (post) => post.chakra === "Wind" && post.grade === "SSS"
+                )
                 .map((item) => (
                   <Link key={item._id} to={`/detail-char/${item._id}`}>
                     <CardCharComp
+                      goDetail={this.handleDetail}
+                      key={item._id}
+                      nama={item.nama}
+                      logo={item.fotohero}
+                    />
+                  </Link>
+                ))}
+              {this.state.post
+                .filter((post) => post.chakra === "Wind" && post.grade === "SS")
+                .map((item) => (
+                  <Link key={item._id} to={`/detail-char/${item._id}`}>
+                    <CardCharComp
+                      goDetail={this.handleDetail}
+                      key={item._id}
+                      nama={item.nama}
+                      logo={item.fotohero}
+                    />
+                  </Link>
+                ))}
+              {this.state.post
+                .filter((post) => post.chakra === "Wind" && post.grade === "S")
+                .map((item) => (
+                  <Link key={item._id} to={`/detail-char/${item._id}`}>
+                    <CardCharComp
+                      goDetail={this.handleDetail}
+                      key={item._id}
+                      nama={item.nama}
+                      logo={item.fotohero}
+                    />
+                  </Link>
+                ))}
+              {this.state.post
+                .filter((post) => post.chakra === "Wind" && post.grade === "A")
+                .map((item) => (
+                  <Link key={item._id} to={`/detail-char/${item._id}`}>
+                    <CardCharComp
+                      goDetail={this.handleDetail}
+                      key={item._id}
+                      nama={item.nama}
+                      logo={item.fotohero}
+                    />
+                  </Link>
+                ))}
+              {this.state.post
+                .filter((post) => post.chakra === "Wind" && post.grade === "B")
+                .map((item) => (
+                  <Link key={item._id} to={`/detail-char/${item._id}`}>
+                    <CardCharComp
+                      goDetail={this.handleDetail}
+                      key={item._id}
+                      nama={item.nama}
+                      logo={item.fotohero}
+                    />
+                  </Link>
+                ))}
+              {this.state.post
+                .filter((post) => post.chakra === "Wind" && post.grade === "D")
+                .map((item) => (
+                  <Link key={item._id} to={`/detail-char/${item._id}`}>
+                    <CardCharComp
+                      goDetail={this.handleDetail}
                       key={item._id}
                       nama={item.nama}
                       logo={item.fotohero}
@@ -85,10 +289,75 @@ class KarakterCont extends Component {
             <h2>Earth</h2>
             <div className="karakter-info">
               {this.state.post
-                .filter((post) => post.chakra === "Earth")
+                .filter(
+                  (post) => post.chakra === "Earth" && post.grade === "SSS"
+                )
                 .map((item) => (
                   <Link key={item._id} to={`/detail-char/${item._id}`}>
                     <CardCharComp
+                      goDetail={this.handleDetail}
+                      key={item._id}
+                      nama={item.nama}
+                      logo={item.fotohero}
+                    />
+                  </Link>
+                ))}
+              {this.state.post
+                .filter(
+                  (post) => post.chakra === "Earth" && post.grade === "SS"
+                )
+                .map((item) => (
+                  <Link key={item._id} to={`/detail-char/${item._id}`}>
+                    <CardCharComp
+                      goDetail={this.handleDetail}
+                      key={item._id}
+                      nama={item.nama}
+                      logo={item.fotohero}
+                    />
+                  </Link>
+                ))}
+              {this.state.post
+                .filter((post) => post.chakra === "Earth" && post.grade === "S")
+                .map((item) => (
+                  <Link key={item._id} to={`/detail-char/${item._id}`}>
+                    <CardCharComp
+                      goDetail={this.handleDetail}
+                      key={item._id}
+                      nama={item.nama}
+                      logo={item.fotohero}
+                    />
+                  </Link>
+                ))}
+              {this.state.post
+                .filter((post) => post.chakra === "Earth" && post.grade === "A")
+                .map((item) => (
+                  <Link key={item._id} to={`/detail-char/${item._id}`}>
+                    <CardCharComp
+                      goDetail={this.handleDetail}
+                      key={item._id}
+                      nama={item.nama}
+                      logo={item.fotohero}
+                    />
+                  </Link>
+                ))}
+              {this.state.post
+                .filter((post) => post.chakra === "Earth" && post.grade === "B")
+                .map((item) => (
+                  <Link key={item._id} to={`/detail-char/${item._id}`}>
+                    <CardCharComp
+                      goDetail={this.handleDetail}
+                      key={item._id}
+                      nama={item.nama}
+                      logo={item.fotohero}
+                    />
+                  </Link>
+                ))}
+              {this.state.post
+                .filter((post) => post.chakra === "Earth" && post.grade === "D")
+                .map((item) => (
+                  <Link key={item._id} to={`/detail-char/${item._id}`}>
+                    <CardCharComp
+                      goDetail={this.handleDetail}
                       key={item._id}
                       nama={item.nama}
                       logo={item.fotohero}
@@ -102,10 +371,83 @@ class KarakterCont extends Component {
             <h2>Lightning</h2>
             <div className="karakter-info">
               {this.state.post
-                .filter((post) => post.chakra === "Lightning")
+                .filter(
+                  (post) => post.chakra === "Lightning" && post.grade === "SSS"
+                )
                 .map((item) => (
                   <Link key={item._id} to={`/detail-char/${item._id}`}>
                     <CardCharComp
+                      goDetail={this.handleDetail}
+                      key={item._id}
+                      nama={item.nama}
+                      logo={item.fotohero}
+                    />
+                  </Link>
+                ))}
+              {this.state.post
+                .filter(
+                  (post) => post.chakra === "Lightning" && post.grade === "SS"
+                )
+                .map((item) => (
+                  <Link key={item._id} to={`/detail-char/${item._id}`}>
+                    <CardCharComp
+                      goDetail={this.handleDetail}
+                      key={item._id}
+                      nama={item.nama}
+                      logo={item.fotohero}
+                    />
+                  </Link>
+                ))}
+              {this.state.post
+                .filter(
+                  (post) => post.chakra === "Lightning" && post.grade === "S"
+                )
+                .map((item) => (
+                  <Link key={item._id} to={`/detail-char/${item._id}`}>
+                    <CardCharComp
+                      goDetail={this.handleDetail}
+                      key={item._id}
+                      nama={item.nama}
+                      logo={item.fotohero}
+                    />
+                  </Link>
+                ))}
+              {this.state.post
+                .filter(
+                  (post) => post.chakra === "Lightning" && post.grade === "A"
+                )
+                .map((item) => (
+                  <Link key={item._id} to={`/detail-char/${item._id}`}>
+                    <CardCharComp
+                      goDetail={this.handleDetail}
+                      key={item._id}
+                      nama={item.nama}
+                      logo={item.fotohero}
+                    />
+                  </Link>
+                ))}
+              {this.state.post
+                .filter(
+                  (post) => post.chakra === "Lightning" && post.grade === "B"
+                )
+                .map((item) => (
+                  <Link key={item._id} to={`/detail-char/${item._id}`}>
+                    <CardCharComp
+                      goDetail={this.handleDetail}
+                      key={item._id}
+                      nama={item.nama}
+                      logo={item.fotohero}
+                    />
+                  </Link>
+                ))}
+              {this.state.post
+                .filter(
+                  (post) => post.chakra === "Lightning" && post.grade === "D"
+                )
+                .map((item) => (
+                  <Link key={item._id} to={`/detail-char/${item._id}`}>
+                    <CardCharComp
+                      goDetail={this.handleDetail}
                       key={item._id}
                       nama={item.nama}
                       logo={item.fotohero}

@@ -8,7 +8,6 @@ import axios from "axios";
 // import useAxios from "axios-hooks";
 
 class SkillCont extends Component {
-
   state = {
     post: [],
   };
@@ -44,11 +43,32 @@ class SkillCont extends Component {
           <div className="skill">
             {this.state.post
               .filter((post) => {
-                if(post.nama.toLowerCase().includes(this.state.nama)) {
+                if (
+                  post.nama.toLowerCase().includes(this.state.nama) &&
+                  post.grade === "SSS"
+                ) {
                   return post;
+                } else if (this.state.nama == null && post.grade === "SSS") {
+                  return (
+                    <CardSkillComp
+                      key={post._id}
+                      logoSkill={post.fotoskill}
+                      namaSkill={post.nama}
+                      grade={post.grade}
+                      chakra={post.chakra}
+                      damage={post.damage}
+                      effect={post.effect}
+                      round={post.round}
+                      launch={post.launch}
+                      rate={post.procRate}
+                      restriction={post.restriction}
+                    />
+                  );
                 }
-                else if(this.state.nama == null){
-                  return <CardSkillComp
+                return null;
+              })
+              .map((post) => (
+                <CardSkillComp
                   key={post._id}
                   logoSkill={post.fotoskill}
                   namaSkill={post.nama}
@@ -61,10 +81,238 @@ class SkillCont extends Component {
                   rate={post.procRate}
                   restriction={post.restriction}
                 />
+              ))}
+            {this.state.post
+              .filter((post) => {
+                if (
+                  post.nama.toLowerCase().includes(this.state.nama) &&
+                  post.grade === "SS"
+                ) {
+                  return post;
+                } else if (this.state.nama == null && post.grade === "SS") {
+                  return (
+                    <CardSkillComp
+                      key={post._id}
+                      logoSkill={post.fotoskill}
+                      namaSkill={post.nama}
+                      grade={post.grade}
+                      chakra={post.chakra}
+                      damage={post.damage}
+                      effect={post.effect}
+                      round={post.round}
+                      launch={post.launch}
+                      rate={post.procRate}
+                      restriction={post.restriction}
+                    />
+                  );
                 }
                 return null;
-              }
-              )
+              })
+              .map((post) => (
+                <CardSkillComp
+                  key={post._id}
+                  logoSkill={post.fotoskill}
+                  namaSkill={post.nama}
+                  grade={post.grade}
+                  chakra={post.chakra}
+                  damage={post.damage}
+                  effect={post.effect}
+                  round={post.round}
+                  launch={post.launch}
+                  rate={post.procRate}
+                  restriction={post.restriction}
+                />
+              ))}
+            {this.state.post
+              .filter((post) => {
+                if (
+                  post.nama.toLowerCase().includes(this.state.nama) &&
+                  post.grade === "S"
+                ) {
+                  return post;
+                } else if (this.state.nama == null && post.grade === "S") {
+                  return (
+                    <CardSkillComp
+                      key={post._id}
+                      logoSkill={post.fotoskill}
+                      namaSkill={post.nama}
+                      grade={post.grade}
+                      chakra={post.chakra}
+                      damage={post.damage}
+                      effect={post.effect}
+                      round={post.round}
+                      launch={post.launch}
+                      rate={post.procRate}
+                      restriction={post.restriction}
+                    />
+                  );
+                }
+                return null;
+              })
+              .map((post) => (
+                <CardSkillComp
+                  key={post._id}
+                  logoSkill={post.fotoskill}
+                  namaSkill={post.nama}
+                  grade={post.grade}
+                  chakra={post.chakra}
+                  damage={post.damage}
+                  effect={post.effect}
+                  round={post.round}
+                  launch={post.launch}
+                  rate={post.procRate}
+                  restriction={post.restriction}
+                />
+              ))}
+            {this.state.post
+              .filter((post) => {
+                if (
+                  post.nama.toLowerCase().includes(this.state.nama) &&
+                  post.grade === "A"
+                ) {
+                  return post;
+                } else if (this.state.nama == null && post.grade === "A") {
+                  return (
+                    <CardSkillComp
+                      key={post._id}
+                      logoSkill={post.fotoskill}
+                      namaSkill={post.nama}
+                      grade={post.grade}
+                      chakra={post.chakra}
+                      damage={post.damage}
+                      effect={post.effect}
+                      round={post.round}
+                      launch={post.launch}
+                      rate={post.procRate}
+                      restriction={post.restriction}
+                    />
+                  );
+                }
+                return null;
+              })
+              .map((post) => (
+                <CardSkillComp
+                  key={post._id}
+                  logoSkill={post.fotoskill}
+                  namaSkill={post.nama}
+                  grade={post.grade}
+                  chakra={post.chakra}
+                  damage={post.damage}
+                  effect={post.effect}
+                  round={post.round}
+                  launch={post.launch}
+                  rate={post.procRate}
+                  restriction={post.restriction}
+                />
+              ))}
+            {this.state.post
+              .filter((post) => {
+                if (
+                  post.nama.toLowerCase().includes(this.state.nama) &&
+                  post.grade === "B"
+                ) {
+                  return post;
+                } else if (this.state.nama == null && post.grade === "B") {
+                  return (
+                    <CardSkillComp
+                      key={post._id}
+                      logoSkill={post.fotoskill}
+                      namaSkill={post.nama}
+                      grade={post.grade}
+                      chakra={post.chakra}
+                      damage={post.damage}
+                      effect={post.effect}
+                      round={post.round}
+                      launch={post.launch}
+                      rate={post.procRate}
+                      restriction={post.restriction}
+                    />
+                  );
+                }
+                return null;
+              })
+              .map((post) => (
+                <CardSkillComp
+                  key={post._id}
+                  logoSkill={post.fotoskill}
+                  namaSkill={post.nama}
+                  grade={post.grade}
+                  chakra={post.chakra}
+                  damage={post.damage}
+                  effect={post.effect}
+                  round={post.round}
+                  launch={post.launch}
+                  rate={post.procRate}
+                  restriction={post.restriction}
+                />
+              ))}
+            {this.state.post
+              .filter((post) => {
+                if (
+                  post.nama.toLowerCase().includes(this.state.nama) &&
+                  post.grade === "C"
+                ) {
+                  return post;
+                } else if (this.state.nama == null && post.grade === "C") {
+                  return (
+                    <CardSkillComp
+                      key={post._id}
+                      logoSkill={post.fotoskill}
+                      namaSkill={post.nama}
+                      grade={post.grade}
+                      chakra={post.chakra}
+                      damage={post.damage}
+                      effect={post.effect}
+                      round={post.round}
+                      launch={post.launch}
+                      rate={post.procRate}
+                      restriction={post.restriction}
+                    />
+                  );
+                }
+                return null;
+              })
+              .map((post) => (
+                <CardSkillComp
+                  key={post._id}
+                  logoSkill={post.fotoskill}
+                  namaSkill={post.nama}
+                  grade={post.grade}
+                  chakra={post.chakra}
+                  damage={post.damage}
+                  effect={post.effect}
+                  round={post.round}
+                  launch={post.launch}
+                  rate={post.procRate}
+                  restriction={post.restriction}
+                />
+              ))}
+            {this.state.post
+              .filter((post) => {
+                if (
+                  post.nama.toLowerCase().includes(this.state.nama) &&
+                  post.grade === "D"
+                ) {
+                  return post;
+                } else if (this.state.nama == null && post.grade === "D") {
+                  return (
+                    <CardSkillComp
+                      key={post._id}
+                      logoSkill={post.fotoskill}
+                      namaSkill={post.nama}
+                      grade={post.grade}
+                      chakra={post.chakra}
+                      damage={post.damage}
+                      effect={post.effect}
+                      round={post.round}
+                      launch={post.launch}
+                      rate={post.procRate}
+                      restriction={post.restriction}
+                    />
+                  );
+                }
+                return null;
+              })
               .map((post) => (
                 <CardSkillComp
                   key={post._id}
