@@ -20,7 +20,7 @@ class HomeCont extends Component {
 
           <div className="content-home-3">
             <HomeTailed/>
-            <HomeKet />
+            {/* <HomeKet /> */}
           </div>
         </div>
     );

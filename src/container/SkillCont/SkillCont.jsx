@@ -8,6 +8,7 @@ import axios from "axios";
 // import useAxios from "axios-hooks";
 
 class SkillCont extends Component {
+
   state = {
     post: [],
   };
@@ -27,7 +28,7 @@ class SkillCont extends Component {
   };
 
   render() {
-    TabTitle("Ninja Bocil | Karakter");
+    TabTitle("Ninja Bocil | Skill");
 
     return (
       <div className="container-skill">
